@@ -1127,8 +1127,8 @@ function playerMove(dt) {
       Math.abs(player.position.z - bz) < 0.5 + PLAYER_RADIUS;
 
     const overlapsY =
-      player.position.y < by + 1 &&
-      player.position.y + PLAYER_HEIGHT > by;
+      player.position.y < by + 0.5 &&
+      player.position.y + PLAYER_HEIGHT >by - 0.5;
 
     if (overlapsX && overlapsZ && overlapsY) {
       player.position.x = oldX;
